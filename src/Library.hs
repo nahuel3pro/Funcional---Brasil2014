@@ -29,7 +29,7 @@ difDistancia :: Auto -> Auto -> Number
 difDistancia auto1 auto2 = (subtract . distancia $ auto1) . distancia $ auto2
 
 vaTranquilo :: Auto -> Carrera -> Bool
-vaTranquilo auto carrera = any (estaCerca auto) carrera && ((==1) . puesto auto $ carrera)
+vaTranquilo auto carrera = (not . any (estaCerca auto) $ carrera) && ((==1) . puesto auto $ carrera)
 
 puesto :: Auto -> Carrera -> Number
 puesto auto carrera = (+1) . length . filter (estaDelante auto) $ carrera
