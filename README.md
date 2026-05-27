@@ -1,9 +1,1 @@
-# ejercicio-alumno
-
-> Importante: Recordá que el archivo principal para escribir tu programa es [src/Library.hs](src/Library.hs) y los tests se escriben en [src/Spec.hs](src/Spec.hs).
-
-## Integrantes
-
-- integrante1 (usuario github)
-- integrante2 (usuario github)
-...
+Parcial: https://docs.google.com/document/d/1g2Gc81R62_xAIiGF0H663ypAz1vxJybr5LDo1sj9tAU/edit?tab=t.0
