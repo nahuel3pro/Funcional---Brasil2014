@@ -99,8 +99,10 @@ correnTodos :: Tiempo -> Carrera -> Carrera
 correnTodos tiempo carrera = map (correr tiempo) carrera
 
 usaPowerUp :: PowerUp -> Color -> Carrera -> Carrera
---usaPowerUp powerUp color carrera = powerUp . filter  
-usaPowerUp = undefined
+usaPowerUp powerUp colorAutoAfectado carrera = powerUp (encontrarAutoPorColor colorAutoAfectado carrera) carrera
+
+encontrarAutoPorColor :: Color -> Carrera -> Auto
+encontrarAutoPorColor colorAuto carrera = head . filter ((==colorAuto). color $) $ carrera
 
 -- c
 autoIncial = Auto{
