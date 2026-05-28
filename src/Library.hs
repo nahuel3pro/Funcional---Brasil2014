@@ -71,8 +71,14 @@ miguelito :: Velocidad -> PowerUp
 miguelito velocidad auto carrera = afectarALosQueCumplen (estaDelante auto) (bajarVelocidad velocidad) carrera
 
 jetPack :: Tiempo -> PowerUp
---jetPack tiempo auto carrera = afectarALosQueCumplen (not sonDistintos auto) (usarJetpack) carrera
-jetPack = undefined
+jetPack tiempo auto carrera = afectarALosQueCumplen (not . sonDistintos auto $) (usarJetpack tiempo) carrera
+--jetPack = undefined
+
+usarJetpack :: Tiempo -> Auto -> Auto
+usarJetpack tiempo auto = reiniciarVelocidadAuto auto . correr tiempo . alterarVelocidad (*2) $ auto
+
+reiniciarVelocidadAuto :: Auto -> Auto -> Auto
+reiniciarVelocidadAuto autoOriginal autoModificado = autoModificado {velocidad = velocidad autoOriginal}
 
 -- 4
 -- a
