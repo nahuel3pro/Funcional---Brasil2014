@@ -46,12 +46,12 @@ getBinDir, getLibDir, getDynLibDir, getDataDir, getLibexecDir, getSysconfDir :: 
 
 
 bindir, libdir, dynlibdir, datadir, libexecdir, sysconfdir :: FilePath
-bindir     = "/home/nahuel/UTN/Paradigmas/parciales/practicas/Funcional---Carreras/.stack-work/install/x86_64-linux/38bef4cd4888f8a524c9295e7d539ca68877cf841b098a78a9d1d1a5220a1e32/9.6.6/bin"
-libdir     = "/home/nahuel/UTN/Paradigmas/parciales/practicas/Funcional---Carreras/.stack-work/install/x86_64-linux/38bef4cd4888f8a524c9295e7d539ca68877cf841b098a78a9d1d1a5220a1e32/9.6.6/lib/x86_64-linux-ghc-9.6.6/repoBase-0.1.0.0-4BT3AmIYla3Fb257nEIo2D"
-dynlibdir  = "/home/nahuel/UTN/Paradigmas/parciales/practicas/Funcional---Carreras/.stack-work/install/x86_64-linux/38bef4cd4888f8a524c9295e7d539ca68877cf841b098a78a9d1d1a5220a1e32/9.6.6/lib/x86_64-linux-ghc-9.6.6"
-datadir    = "/home/nahuel/UTN/Paradigmas/parciales/practicas/Funcional---Carreras/.stack-work/install/x86_64-linux/38bef4cd4888f8a524c9295e7d539ca68877cf841b098a78a9d1d1a5220a1e32/9.6.6/share/x86_64-linux-ghc-9.6.6/repoBase-0.1.0.0"
-libexecdir = "/home/nahuel/UTN/Paradigmas/parciales/practicas/Funcional---Carreras/.stack-work/install/x86_64-linux/38bef4cd4888f8a524c9295e7d539ca68877cf841b098a78a9d1d1a5220a1e32/9.6.6/libexec/x86_64-linux-ghc-9.6.6/repoBase-0.1.0.0"
-sysconfdir = "/home/nahuel/UTN/Paradigmas/parciales/practicas/Funcional---Carreras/.stack-work/install/x86_64-linux/38bef4cd4888f8a524c9295e7d539ca68877cf841b098a78a9d1d1a5220a1e32/9.6.6/etc"
+bindir     = "/home/nahuel/Desktop/Funcional---Brasil2014/.stack-work/install/x86_64-linux/38bef4cd4888f8a524c9295e7d539ca68877cf841b098a78a9d1d1a5220a1e32/9.6.6/bin"
+libdir     = "/home/nahuel/Desktop/Funcional---Brasil2014/.stack-work/install/x86_64-linux/38bef4cd4888f8a524c9295e7d539ca68877cf841b098a78a9d1d1a5220a1e32/9.6.6/lib/x86_64-linux-ghc-9.6.6/repoBase-0.1.0.0-4BT3AmIYla3Fb257nEIo2D"
+dynlibdir  = "/home/nahuel/Desktop/Funcional---Brasil2014/.stack-work/install/x86_64-linux/38bef4cd4888f8a524c9295e7d539ca68877cf841b098a78a9d1d1a5220a1e32/9.6.6/lib/x86_64-linux-ghc-9.6.6"
+datadir    = "/home/nahuel/Desktop/Funcional---Brasil2014/.stack-work/install/x86_64-linux/38bef4cd4888f8a524c9295e7d539ca68877cf841b098a78a9d1d1a5220a1e32/9.6.6/share/x86_64-linux-ghc-9.6.6/repoBase-0.1.0.0"
+libexecdir = "/home/nahuel/Desktop/Funcional---Brasil2014/.stack-work/install/x86_64-linux/38bef4cd4888f8a524c9295e7d539ca68877cf841b098a78a9d1d1a5220a1e32/9.6.6/libexec/x86_64-linux-ghc-9.6.6/repoBase-0.1.0.0"
+sysconfdir = "/home/nahuel/Desktop/Funcional---Brasil2014/.stack-work/install/x86_64-linux/38bef4cd4888f8a524c9295e7d539ca68877cf841b098a78a9d1d1a5220a1e32/9.6.6/etc"
 
 getBinDir     = catchIO (getEnv "repoBase_bindir")     (\_ -> return bindir)
 getLibDir     = catchIO (getEnv "repoBase_libdir")     (\_ -> return libdir)
