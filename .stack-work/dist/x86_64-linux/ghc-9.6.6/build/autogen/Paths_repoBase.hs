@@ -46,12 +46,12 @@ getBinDir, getLibDir, getDynLibDir, getDataDir, getLibexecDir, getSysconfDir :: 
 
 
 bindir, libdir, dynlibdir, datadir, libexecdir, sysconfdir :: FilePath
-bindir     = "/home/nahuel/Escritorio/Funcional---Brasil2014/.stack-work/install/x86_64-linux/918e9ef17365bc65b52dfe97d94561d52ee064e20e8b963a746ba43991cee449/9.6.6/bin"
-libdir     = "/home/nahuel/Escritorio/Funcional---Brasil2014/.stack-work/install/x86_64-linux/918e9ef17365bc65b52dfe97d94561d52ee064e20e8b963a746ba43991cee449/9.6.6/lib/x86_64-linux-ghc-9.6.6/repoBase-0.1.0.0-4BT3AmIYla3Fb257nEIo2D"
-dynlibdir  = "/home/nahuel/Escritorio/Funcional---Brasil2014/.stack-work/install/x86_64-linux/918e9ef17365bc65b52dfe97d94561d52ee064e20e8b963a746ba43991cee449/9.6.6/lib/x86_64-linux-ghc-9.6.6"
-datadir    = "/home/nahuel/Escritorio/Funcional---Brasil2014/.stack-work/install/x86_64-linux/918e9ef17365bc65b52dfe97d94561d52ee064e20e8b963a746ba43991cee449/9.6.6/share/x86_64-linux-ghc-9.6.6/repoBase-0.1.0.0"
-libexecdir = "/home/nahuel/Escritorio/Funcional---Brasil2014/.stack-work/install/x86_64-linux/918e9ef17365bc65b52dfe97d94561d52ee064e20e8b963a746ba43991cee449/9.6.6/libexec/x86_64-linux-ghc-9.6.6/repoBase-0.1.0.0"
-sysconfdir = "/home/nahuel/Escritorio/Funcional---Brasil2014/.stack-work/install/x86_64-linux/918e9ef17365bc65b52dfe97d94561d52ee064e20e8b963a746ba43991cee449/9.6.6/etc"
+bindir     = "/home/nahuel/Escritorio/programs/Funcional---Brasil2014/.stack-work/install/x86_64-linux/918e9ef17365bc65b52dfe97d94561d52ee064e20e8b963a746ba43991cee449/9.6.6/bin"
+libdir     = "/home/nahuel/Escritorio/programs/Funcional---Brasil2014/.stack-work/install/x86_64-linux/918e9ef17365bc65b52dfe97d94561d52ee064e20e8b963a746ba43991cee449/9.6.6/lib/x86_64-linux-ghc-9.6.6/repoBase-0.1.0.0-4BT3AmIYla3Fb257nEIo2D"
+dynlibdir  = "/home/nahuel/Escritorio/programs/Funcional---Brasil2014/.stack-work/install/x86_64-linux/918e9ef17365bc65b52dfe97d94561d52ee064e20e8b963a746ba43991cee449/9.6.6/lib/x86_64-linux-ghc-9.6.6"
+datadir    = "/home/nahuel/Escritorio/programs/Funcional---Brasil2014/.stack-work/install/x86_64-linux/918e9ef17365bc65b52dfe97d94561d52ee064e20e8b963a746ba43991cee449/9.6.6/share/x86_64-linux-ghc-9.6.6/repoBase-0.1.0.0"
+libexecdir = "/home/nahuel/Escritorio/programs/Funcional---Brasil2014/.stack-work/install/x86_64-linux/918e9ef17365bc65b52dfe97d94561d52ee064e20e8b963a746ba43991cee449/9.6.6/libexec/x86_64-linux-ghc-9.6.6/repoBase-0.1.0.0"
+sysconfdir = "/home/nahuel/Escritorio/programs/Funcional---Brasil2014/.stack-work/install/x86_64-linux/918e9ef17365bc65b52dfe97d94561d52ee064e20e8b963a746ba43991cee449/9.6.6/etc"
 
 getBinDir     = catchIO (getEnv "repoBase_bindir")     (\_ -> return bindir)
 getLibDir     = catchIO (getEnv "repoBase_libdir")     (\_ -> return libdir)

@@ -67,6 +67,44 @@ cansarJugador jugador
  | (not.esJoven $ jugador) && (esFigura jugador) = jugador {cansancio = (+20) . cansancio $ jugador}
  | otherwise = jugador {cansancio = (*2) . cansancio $ jugador}
 
- --5
+  {-5) Empezó el mundial y los partidos se empiezan a jugar. ¿Cómo saber quién gana en cada partido? Cuando se enfrentan
+  2 equipos, se seleccionan los primeros 11 jugadores (por equipo) que menos cansados están y se suma su promedio de gol. 
+  El que sume un mejor promedio gana el partido. 
+Se pide entonces, dados dos equipos, devolver al ganador del partido, con sus jugadores modificados
+ por haber jugado el partido.
+
+	Usar take y sort
+-}
+menosCansados :: Equipo -> [Jugador]
+menosCansados = take 11 . quickSort menorCansansio . listaJugadores
+
+promedioGolEnEquipo :: [Jugador] -> Promedio
+promedioGolEnEquipo equipo = sum . map . promedioGol
+
 ganador :: Equipo -> Equipo -> Equipo
-ganador equipo1 equipo2 = undefined
+ganador equipo1 equipo2
+ | (< (promedioGolEnEquipo . menosCansados $ equipo1)) . promedioGolEnEquipo . menosCansados $ equipo2 = equipo1
+ | otherwise = equipo2
+
+{-
+6) Sabiendo ya cómo se decide el ganador de un partido, ahora queremos saber, a partir de un grupo de equipos, 
+qué equipo se consagrará campeón del torneo.
+¿Cómo se juegan los partidos? 
+El primero juega contra el segundo → Ganador1
+Ganador1 juega contra tercer equipo → Ganador2
+Ganador2 juega contra cuarto equipo → Ganador3
+
+Y así hasta que el ganador del último partido se consagra campeón.
+Dar 2 resoluciones diferentes al ejercicio
+-}
+
+{-
+7) Los días pasaron, las vuvuzelas se escucharon, una nueva Larissa Riquelme se hizo conocida,
+y el pulpo Paul volvió a acertar en los resultados. Después de un gran mundial se quiere saber quién va a ser elegido
+ como el mejor de todos para entregarle el premio y ser reconocido en todo el mundo como “EL GROSO”.
+Para ello se ingresa una lista de equipos, y del equipo elegido ganador (el campeón), se quiere saber el nombre del primer
+ jugador que cumpla la condición de ser figura (en todo equipo hay 1 por lo menos).
+
+
+filter esFigura y tomar el head de esa lista
+-}
